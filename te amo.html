@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para mi amor Alison 💖</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Corazones flotando */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: #ff3366;
+      animation: floatUp 8s infinite ease-in;
+      opacity: 0.7;
+      font-size: 24px;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    }
+
+    .hero {
+      text-align: center;
+      color: white;
+      padding: 100px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
+
+    footer {
+      background: rgba(255,255,255,0.8);
+      padding: 20px 0;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .love-message {
+      animation: fadeIn 2s ease-in;
+      color: #ff1e56;
+      font-weight: bold;
+    }
+
+    /* Sección de preguntas */
+    .quiz-section {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .quiz-question {
+      font-size: 1.3rem;
+      color: #e63950;
+      margin-bottom: 20px;
+    }
+
+    .quiz-btn {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background-color: #ff7a9c;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .quiz-btn:hover {
+      background-color: #ff527b;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    /* Mensaje final */
+    #finalMessage {
+      display: none;
+      animation: fadeIn 3s ease-in-out;
+      text-align: center;
+      margin-top: 40px;
+      color: #ff1e56;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    @keyframes popHearts {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .heart-burst {
+      animation: popHearts 1s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+<body>
+  <!-- Música de fondo -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/1crMUfqH6i0?autoplay=1&loop=1" frameborder="0" allow="autoplay"></iframe>
+
+  <!-- Corazones flotando -->
+  <script>
+    function crearCorazones() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 5 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(crearCorazones, 400);
+  </script>
+
+  <!-- Sección principal -->
+  <section class="hero">
+    <h1>💖 Feliz Aniversario, mi amor Alison 💖</h1>
+    <p class="fs-5">Hoy celebramos 3 años de amor, alegría y momentos inolvidables.</p>
+  </section>
+
+  <!-- Galería -->
+  <div class="container my-5">
+    <div id="galeria" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner rounded-4 shadow-lg">
+        <!-- Agrega tus fotos aquí -->
+        <div class="carousel-item active">
+          <img src="imagenes/IMG_20230831_122634.jpg" class="d-block w-100" alt="Amor 1">
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/Imagen de WhatsApp 2025-10-26 a las 23.21.11_81c4e524.jpg" class="d-block w-100" alt="Amor 2">
+        </div>
+        <div class="carousel-item">
+          <img src="imagenes/te amo.JPG" class="d-block w-100" alt="Amor 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#galeria" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galeria" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Carta -->
+  <div class="container my-5">
+    <div class="card p-4 text-center">
+      <h3 class="mb-3 text-danger">💌 Para ti, mi Alison 💌</h3>
+      <p class="fs-5 love-message">
+        Eres todo para mí, te amo con toda mi vida.  
+        Eres la felicidad de mis días, siempre te amaré amor.  
+        Pase lo que pase, te amaré amor.  
+        Me siento tan feliz porque ya son 3 años de mucho amor y aprendizaje.  
+        Estar a tu lado es lo que más amo en toda mi vida,  
+        porque lo que más quiero es tener una familia a tu lado.  
+        Que seas mi esposa, que seas la mujer de toda mi vida.  
+        Te amo mi Alison, te amo mi corazón, te amo mi vida, te amo mi amor. ❤️❤️  
+      </p>
+      <p class="mt-4 text-muted">— Con todo mi amor, Joseph 💞</p>
+    </div>
+  </div>
+
+  <!-- Preguntas interactivas -->
+  <div class="container quiz-section" id="quizSection">
+    <h3 class="mb-4 text-danger">💞 Un pequeño juego del amor 💞</h3>
+
+    <div id="quiz">
+      <div class="quiz-question">¿Quién dijo "te amo" primero? 💖</div>
+      <button class="quiz-btn" onclick="nextQuestion('¡Tú lo dijiste primero, mi amor! 💕')">Alison 💕</button>
+      <button class="quiz-btn" onclick="nextQuestion('Tal vez yo, pero tú lo dijiste con el corazón más bonito ❤️')">Joseph 😎</button>
+
+      <div class="quiz-question mt-4">¿Quién es más cariñoso? 🥰</div>
+      <button class="quiz-btn" onclick="nextQuestion('¡Tú, mi amor! Siempre tan tierna 💖')">Alison 💋</button>
+      <button class="quiz-btn" onclick="nextQuestion('Yo, porque no puedo dejar de darte amor 😘')">Joseph 💞</button>
+
+      <div class="quiz-question mt-4">¿Quién se duerme primero? 😴</div>
+      <button class="quiz-btn" onclick="nextQuestion('Jajaja siempre tú, mi amor 💖')">Alison 😴</button>
+      <button class="quiz-btn" onclick="nextQuestion('Tal vez yo... pero soñando contigo 💘')">Joseph 💤</button>
+
+      <div class="quiz-question mt-4">¿Quién es más celoso? 😅</div>
+      <button class="quiz-btn" onclick="nextQuestion('Un poquito tú 😅 pero me encanta ❤️')">Alison 😇</button>
+      <button class="quiz-btn" onclick="nextQuestion('Quizá yo 😜 pero solo porque te amo 💓')">Joseph 😍</button>
+
+      <div class="quiz-question mt-4">¿Quieres estar conmigo para siempre? 💍</div>
+      <button class="quiz-btn" onclick="mostrarFinal()">Sí ❤️</button>
+      <button class="quiz-btn" onclick="mostrarFinal()">Siempre contigo 💘</button>
+
+      <div id="resultado" class="result mt-4"></div>
+    </div>
+  </div>
+
+  <!-- Mensaje final sorpresa -->
+  <div id="finalMessage">
+    💍 Mi Alison... gracias por estos 3 años.  
+    <br>¿Te casarías conmigo? 💘  
+    <div style="font-size:3rem;" class="heart-burst mt-3">❤️💖💞💘💝</div>
+  </div>
+
+  <footer class="mt-5">
+    <p>Hecho con 💖 por Joseph para Alison | 3 años de amor infinito 💫</p>
+  </footer>
+
+  <script>
+    function crearCorazonesExtra() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 2 + 4 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+
+    function nextQuestion(texto) {
+      document.getElementById("resultado").innerHTML = texto;
+    }
+
+    function mostrarFinal() {
+      document.getElementById("quizSection").style.display = "none";
+      document.getElementById("finalMessage").style.display = "block";
+      setInterval(crearCorazonesExtra, 300);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
